@@ -1,0 +1,300 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+
+/* Header */
+
+.header {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 45px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+
+/* Gallery */
+
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Gallery item */
+
+.gallery-item {
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Image */
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease,
+                filter 0.5s ease;
+}
+
+
+/* Hover animation */
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+
+    filter: brightness(0.8);
+}
+
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+.lightbox {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+
+/* Lightbox image */
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Close button */
+
+.close-btn {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 45px;
+
+    color: white;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    z-index: 1002;
+
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+
+/* Previous / Next buttons */
+
+.nav-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    border: none;
+
+    font-size: 35px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 1001;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* Previous button */
+
+.prev-btn {
+    left: 30px;
+}
+
+
+/* Next button */
+
+.next-btn {
+    right: 30px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    background: #222;
+
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .gallery {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 70%;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+
+        font-size: 25px;
+    }
+
+    .close-btn {
+        right: 15px;
+        top: 10px;
+    }
+}
