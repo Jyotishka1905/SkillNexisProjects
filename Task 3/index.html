@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="weather-card">
+
+            <h1>Weather App</h1>
+
+            <p class="subtitle">
+                Check the current weather of any city
+            </p>
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name"
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- Error Message -->
+
+            <p id="errorMessage" class="error-message"></p>
+
+
+            <!-- Weather Information -->
+
+            <div id="weatherInfo" class="weather-info">
+
+                <h2 id="cityName">
+                    City Name
+                </h2>
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather icon"
+                >
+
+                <h3 id="temperature">
+                    --°C
+                </h3>
+
+                <p id="condition">
+                    Weather condition
+                </p>
+
+
+                <div class="weather-details">
+
+                    <div class="detail-box">
+
+                        <span>💧</span>
+
+                        <p>Humidity</p>
+
+                        <strong id="humidity">
+                            --%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <span>🌡️</span>
+
+                        <p>Feels Like</p>
+
+                        <strong id="feelsLike">
+                            --°C
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Weather App
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

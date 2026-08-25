@@ -1,0 +1,354 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.container {
+    width: 90%;
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* =========================
+   WEATHER CARD
+   ========================= */
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 35px 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.weather-card h1 {
+    font-size: 36px;
+
+    color: #1976d2;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SEARCH BOX
+   ========================= */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #2196f3;
+}
+
+
+/* Search button */
+
+.search-box button {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2196f3;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s,
+        transform 0.2s;
+}
+
+.search-box button:hover {
+    background: #1976d2;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ERROR
+   ========================= */
+
+.error-message {
+    color: #e53935;
+
+    font-weight: bold;
+
+    min-height: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   WEATHER INFORMATION
+   ========================= */
+
+.weather-info {
+    display: none;
+
+    animation: fadeIn 0.5s ease;
+}
+
+.weather-info h2 {
+    font-size: 28px;
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   WEATHER ICON
+   ========================= */
+
+#weatherIcon {
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   TEMPERATURE
+   ========================= */
+
+#temperature {
+    font-size: 55px;
+
+    color: #1976d2;
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   CONDITION
+   ========================= */
+
+#condition {
+    font-size: 20px;
+
+    color: #666;
+
+    text-transform: capitalize;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   WEATHER DETAILS
+   ========================= */
+
+.weather-details {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* Detail box */
+
+.detail-box {
+    flex: 1;
+
+    background: #f1f8ff;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    transition: transform 0.3s;
+}
+
+.detail-box:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Icon */
+
+.detail-box span {
+    font-size: 25px;
+}
+
+
+/* Label */
+
+.detail-box p {
+    color: #777;
+
+    margin: 5px 0;
+}
+
+
+/* Value */
+
+.detail-box strong {
+    font-size: 20px;
+
+    color: #1976d2;
+}
+
+
+/* =========================
+   ANIMATION
+   ========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    color: white;
+
+    margin-top: auto;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .weather-card {
+        padding: 30px 20px;
+    }
+
+    .weather-card h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    #temperature {
+        font-size: 45px;
+    }
+
+    .weather-details {
+        gap: 10px;
+    }
+
+    .detail-box {
+        padding: 14px 8px;
+    }
+}
