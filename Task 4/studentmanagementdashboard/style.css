@@ -1,0 +1,464 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #333;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.container {
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    flex: 1;
+}
+
+
+/* =========================
+   FORM SECTION
+   ========================= */
+
+.form-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 25px;
+}
+
+.form-section h2 {
+    color: #5b4bc4;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FORM GRID
+   ========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   FORM GROUP
+   ========================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #444;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.form-group input,
+.form-group select,
+.filter-section input,
+.filter-section select {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.filter-section input:focus,
+.filter-section select:focus {
+    border-color: #667eea;
+}
+
+
+/* =========================
+   FORM BUTTONS
+   ========================= */
+
+.form-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.form-buttons button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: #667eea;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.form-buttons button:hover {
+    background: #5548c2;
+
+    transform: translateY(-2px);
+}
+
+.form-buttons .cancel-btn {
+    background: #777;
+}
+
+.form-buttons .cancel-btn:hover {
+    background: #555;
+}
+
+
+/* =========================
+   FILTER SECTION
+   ========================= */
+
+.filter-section {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   STUDENT COUNT
+   ========================= */
+
+.student-count {
+    background: white;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    color: #555;
+}
+
+.student-count strong {
+    color: #667eea;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   TABLE SECTION
+   ========================= */
+
+.table-section {
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+   ========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+
+/* Table header */
+
+thead {
+    background: #667eea;
+
+    color: white;
+}
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+
+/* Table cells */
+
+td {
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+
+/* Table row */
+
+tbody tr {
+    transition: background 0.2s;
+}
+
+tbody tr:hover {
+    background: #f7f7ff;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+   ========================= */
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: #2196f3;
+}
+
+.edit-btn:hover {
+    background: #1976d2;
+}
+
+.delete-btn {
+    background: #e53935;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+}
+
+
+/* =========================
+   NO STUDENTS
+   ========================= */
+
+.no-students {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #888;
+
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-section {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}

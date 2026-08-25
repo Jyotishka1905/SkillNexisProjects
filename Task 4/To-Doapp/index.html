@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My To-Do App</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <h1>My To-Do App</h1>
+
+            <p>
+                Organize your tasks and get things done.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main class="container">
+
+
+        <!-- =========================
+             ADD TASK
+             ========================= -->
+
+        <section class="add-task-section">
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH
+             ========================= -->
+
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+        </section>
+
+
+        <!-- =========================
+             FILTER
+             ========================= -->
+
+        <section class="task-controls">
+
+            <div class="filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="active"
+                >
+                    Active
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="completed"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+
+            <button
+                id="clearCompleted"
+                class="clear-btn"
+            >
+                Clear Completed
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             TASK COUNT
+             ========================= -->
+
+        <div class="task-info">
+
+            <span>
+                Total Tasks:
+                <strong id="totalTasks">
+                    0
+                </strong>
+            </span>
+
+            <span>
+                Remaining:
+                <strong id="remainingTasks">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             TASK LIST
+             ========================= -->
+
+        <section class="task-section">
+
+            <ul
+                id="taskList"
+                class="task-list"
+            >
+
+                <!-- Tasks created by JavaScript -->
+
+            </ul>
+
+
+            <div
+                id="emptyMessage"
+                class="empty-message"
+            >
+
+                <div class="empty-icon">
+                    📝
+                </div>
+
+                <h3>
+                    No tasks found
+                </h3>
+
+                <p>
+                    Add a task to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 My To-Do App
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
